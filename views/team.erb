@@ -7,7 +7,7 @@
  <body>
    <% params.each do |k, v| %>
     <% if k == "team_name" %>
-      <h1><%= k.capitalize.tr("_", " ") %>: <%= v %><h1>
+      <h1><%= k.split(/ |\_/).map(&:capitalize).join(" ") %>: <%= v %><h1>
     <% else %>
       <h2><%= k.capitalize.tr("_", " ") %>: <%= v %><h1>
     <% end %>
