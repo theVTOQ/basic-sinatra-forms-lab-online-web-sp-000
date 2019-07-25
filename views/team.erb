@@ -5,10 +5,12 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
-
-
+   <% params.each do |k, v| %>
+    <% if k == "team_name" %>
+      <h1><%= k.capitalize.tr("_", " ") %>: <%= v %><h1>
+    <% else %>
+      <h2><%= k.capitalize.tr("_", " ") %>: <%= v %><h1>
+    <% end %>
+   <% end %>
  </body>
 </html>
-
-
